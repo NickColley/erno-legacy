@@ -1,0 +1,25 @@
+{
+  "name": "erno",
+  "version": "0.0.0",
+  "description": "Multi-user Puzzle Timer",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nickcolley/erno.git"
+  },
+  "keywords": [
+    "erno",
+    "timer",
+    "rubik",
+    "puzzle"
+  ],
+  "author": "Nick Colley <nickcolley7@gmail.com> (https://twitter.com/nickcolley)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickcolley/erno/issues"
+  },
+  "homepage": "https://github.com/nickcolley/erno"
+}
