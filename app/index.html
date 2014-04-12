@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="erno">
+<head>
+	<meta charset="UTF-8">
+	<title>Erno</title>
+	<script src="//wzrd.in/standalone/scrambo@latest"></script>
+	<script src="./lib/angular.js"></script>
+
+	<script src="./js/controllers.js"></script>
+	<script src="./js/directives.js"></script>
+	<script src="./js/app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+
+	<select
+		ng-model='type'
+		ng-options='t for t in types()'>
+	</select>
+
+	<h1>{{ currentScramble }}</h1>
+
+	<button ng-click="scramble()">New Scramble</button>
+
+</body>
+</html>
