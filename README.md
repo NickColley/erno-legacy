@@ -1,2 +1,2 @@
-# Erno - Mutli-user Puzzle Timer
+# Erno - Puzzle Timer
 ![erno](http://rawgithub.com/nickcolley/erno/master/erno.svg)
