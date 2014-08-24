@@ -1,25 +1,13 @@
 <!doctype html>
-<html lang="en" ng-app="erno">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Erno</title>
-	<script src="//wzrd.in/standalone/scrambo@latest"></script>
-	<script src="./lib/angular.js"></script>
-
-	<script src="./js/controllers.js"></script>
-	<script src="./js/directives.js"></script>
-	<script src="./js/app.js"></script>
+    <title>My React App</title>
+    <script src="http://fb.me/react-0.9.0.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.9.0.js"></script>
 </head>
-<body ng-controller="MainCtrl">
-
-	<select
-		ng-model='type'
-		ng-options='t for t in types()'>
-	</select>
-
-	<h1>{{ currentScramble }}</h1>
-
-	<button ng-click="scramble()">New Scramble</button>
-
+<body>
+    <script type="text/jsx">
+        /** @jsx React.DOM */
+    </script>
 </body>
 </html>
