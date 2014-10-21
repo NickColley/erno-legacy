@@ -1,10 +1,11 @@
 {
   "name": "erno",
   "version": "0.0.0",
-  "description": "Multi-user Puzzle Timer",
+  "description": "Puzzle Timer",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "build": "browserify -e app.js -t reactify -o bundle.js",
+    "build:min": "browserify -e app.js -t reactify -t uglifyify -o bundle.min.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/nickcolley/erno/issues"
   },
-  "homepage": "https://github.com/nickcolley/erno"
+  "homepage": "https://github.com/nickcolley/erno",
+  "dependencies": {
+    "scrambo": "^0.1.0",
+    "react": "^0.11.1"
+  },
+  "devDependencies": {
+    "uglifyify": "^2.5.0",
+    "reactify": "^0.14.0",
+    "browserify": "^5.10.1",
+    "react": "^0.11.2"
+  }
 }
