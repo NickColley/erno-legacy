@@ -4,8 +4,9 @@
   "description": "Puzzle Timer",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -e app.js -t reactify -o bundle.js",
-    "build:min": "browserify -e app.js -t reactify -t uglifyify -o bundle.min.js"
+    "watch": "watchify -e app.jsx -t reactify -o bundle.js",
+    "build": "browserify -e app.jsx -t reactify -o bundle.js",
+    "build:min": "browserify -e app.jsx -t reactify -t uglifyify -o bundle.min.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,10 @@
   "homepage": "https://github.com/nickcolley/erno",
   "dependencies": {
     "scrambo": "^0.1.0",
-    "react": "^0.11.1"
+    "react": "^0.11.1",
+    "pouchdb": "^3.3.0",
+    "flux": "^2.0.1",
+    "object-assign": "^2.0.0"
   },
   "devDependencies": {
     "uglifyify": "^2.5.0",
