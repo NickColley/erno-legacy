@@ -1,40 +1,61 @@
 {
-  "name": "erno",
-  "version": "0.0.0",
-  "description": "Puzzle Timer",
-  "main": "index.js",
+  "name": "Ernő",
+  "version": "1.0.0",
+  "description": "Rubik's Cube Timer",
+  "main": "server.js",
   "scripts": {
-    "watch": "watchify -e app.jsx -t reactify -o bundle.js",
-    "build": "browserify -e app.jsx -t reactify -o bundle.js",
-    "build:min": "browserify -e app.jsx -t reactify -t uglifyify -o bundle.min.js"
+    "start": "if [[ ${NODE_ENV} == \"production\" ]]; then npm run start:prod; else npm run start:dev; fi",
+    "start:dev": "node server.js",
+    "start:prod": "NODE_ENV=production npm run build:prod && node server.js",
+    "build:prod": "NODE_ENV=production webpack --config webpack.prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nickcolley/erno.git"
+  "engines": {
+    "node": "8.9.x"
   },
-  "keywords": [
-    "erno",
-    "timer",
-    "rubik",
-    "puzzle"
-  ],
-  "author": "Nick Colley <nickcolley7@gmail.com> (https://twitter.com/nickcolley)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nickcolley/erno/issues"
-  },
-  "homepage": "https://github.com/nickcolley/erno",
   "dependencies": {
-    "scrambo": "^0.1.0",
-    "react": "^0.11.1",
-    "pouchdb": "^3.3.0",
-    "flux": "^2.0.1",
-    "object-assign": "^2.0.0"
+    "nunjucks": "^3.0.1",
+    "express": "^4.16.2",
+    "scrambo": "^0.3.0",
+    "compression": "^1.7.1",
+    "pepjs": "^0.4.3"
   },
   "devDependencies": {
-    "uglifyify": "^2.5.0",
-    "reactify": "^0.14.0",
-    "browserify": "^5.10.1",
-    "react": "^0.11.2"
-  }
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.1",
+    "webpack-merge": "^4.1.1",
+    "babel-plugin-dynamic-import-webpack": "^1.0.2",
+    "style-loader": "^0.19.0",
+    "css-loader": "^0.28.7",
+    "postcss-loader": "^2.0.9",
+    "postcss-inject-css-variables": "^0.0.2",
+    "postcss-cssnext": "^3.0.2",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-inline-source-plugin": "^0.0.9",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack-pwa-manifest": "^3.3.2",
+    "workbox-webpack-plugin": "^2.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "babel-loader": "^7.1.2",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "dynamic-import-webpack"
+    ]
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/erno"
+  },
+  "license": "MIT",
+  "keywords": [
+    "rubik",
+    "timer",
+    "cube"
+  ]
 }
